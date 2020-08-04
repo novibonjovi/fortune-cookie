@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -25,12 +32,12 @@ body {
 #img-container {
   height: 120px;
   width: 120px;
-  margin: 1.5em 97.5px 0 97.5px;
+  margin: 1.5em auto 0 auto;
   padding: 30px;
   border-radius: 50%;
   background-color: #e9e9e9;
-  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
-          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 #img-container #img {
@@ -41,9 +48,12 @@ body {
   text-align: left;
   padding: 18.81px;
   margin-top: 0.5em;
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#section-container #section {
+#section-container #message {
   color: #100013;
   padding: 20px 20px;
   font-size: 1em;
@@ -51,23 +61,29 @@ body {
   line-height: 1.5em;
   border-radius: 20px;
   background-color: #e9e9e9;
-  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
-          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 #button {
   text-align: center;
   position: absolute;
-  bottom: 1.5em;
-  width: 337.41px;
+  top: 500px;
+  width: 300px;
   padding: 1em 0;
   left: 50%;
-  margin-left: -168.705px;
+  margin-left: -150px;
   border-radius: 20px;
   background-color: #e9e9e9;
-  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
-          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7), 12px 12px 12px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#button:hover {
+  background-color: #eed8d8;
 }
 
 #button #button-text {
@@ -80,13 +96,14 @@ body {
 #footer {
   padding: 0.3em 0 0 0;
   background-color: #100013;
-  position: absolute;
-  bottom: -45.97px;
+  position: fixed;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 }
 
 #footer #footer-text {
+  margin-bottom: 10px;
   color: #e9e9e9;
   font-size: 0.7em;
   font-weight: lighter;

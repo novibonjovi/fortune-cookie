@@ -2,11 +2,17 @@
 
 $colors: (
   primary: #e9e9e9,
-  secondary: #100013
+  secondary: #100013,
 );
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 html,
@@ -34,12 +40,12 @@ body {
 #img-container {
   height: 120px;
   width: 120px;
-  margin: 1.5em 97.5px 0 97.5px;
+  margin: 1.5em auto 0 auto;
   padding: 30px;
   border-radius: 50%;
   background-color: color(primary);
   box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7),
-    12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+    12px 12px 12px 0 rgba(0, 0, 0, 0.15);
   #img {
     margin: 0 0 0 12px;
   }
@@ -49,7 +55,10 @@ body {
   text-align: left;
   padding: 18.81px;
   margin-top: 0.5em;
-  #section {
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  #message {
     color: color(secondary);
     padding: 20px 20px;
     font-size: 1em;
@@ -58,23 +67,29 @@ body {
     border-radius: 20px;
     background-color: color(primary);
     box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7),
-      12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+      12px 12px 12px 0 rgba(0, 0, 0, 0.15);
   }
 }
 
 #button {
   text-align: center;
   position: absolute;
-  bottom: 1.5em;
-  width: 337.41px;
+  top: 500px;
+  width: 300px;
   padding: 1em 0;
   left: 50%;
-  margin-left: -168.705px;
+  margin-left: -150px;
   border-radius: 20px;
   background-color: color(primary);
   box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.7),
-    12px 12px 12px 0 rgba(0, 0, 0, 0.04);
+    12px 12px 12px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: hsla(0, 39%, 89%, 1);
+  }
+
   #button-text {
     color: #9e0a26;
     font-size: 1.5em;
@@ -86,11 +101,12 @@ body {
 #footer {
   padding: 0.3em 0 0 0;
   background-color: color(secondary);
-  position: absolute;
-  bottom: -45.97px;
+  position: fixed;
+  bottom: 0px;
   width: 100%;
   text-align: center;
   #footer-text {
+    margin-bottom: 10px;
     color: color(primary);
     font-size: 0.7em;
     font-weight: lighter;

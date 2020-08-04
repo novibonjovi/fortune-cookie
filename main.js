@@ -1,5 +1,5 @@
 const button_div = document.getElementById('button');
-const quote_section = document.getElementById('section');
+const quote_section = document.getElementById('message');
 const quotes = [
   'The fortune you seek is in another cookie.',
   'A closed mouth gathers no feet.',
@@ -82,7 +82,7 @@ const quotes = [
   'Learn to take responsibility for your actions.',
   'In the end, there are three things that last: faith, hope and love.',
   'Do not waste time hating your enemies, pray for them instead.',
-  'Tomorrow will be a better day. And if not, there’s always chocolate.'
+  'Tomorrow will be a better day. And if not, there’s always chocolate.',
 ];
 
 function newQuote() {
